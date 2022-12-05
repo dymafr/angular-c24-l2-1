@@ -1,0 +1,32 @@
+<mat-accordion multi="true">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Mes données
+      </mat-panel-title>
+      <mat-panel-description>
+        Nom, âge, profession et activités favorites
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>Bob, 30 ans, ingénieur.</p>
+    <p>Il aime la pêche et le catamaran.</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel
+    (opened)="etatDuPanneau = true"
+    (closed)="etatDuPanneau = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Mon petit panneau
+      </mat-panel-title>
+      <mat-panel-description>
+        Je suis {{etatDuPanneau ? 'ouvert' : 'fermé'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Je suis visible lorsque le panneau est ouvert</p>
+    <mat-action-row>
+      <button mat-raised-button color="warn">Clic ici !</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
